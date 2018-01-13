@@ -1,0 +1,17 @@
+body {
+	font-family: 'Arial';
+	background-color: lightgray;
+}
+
+.card {
+ min-height: 350px;
+}
+
+img {
+	min-height: 250px;
+	max-height: 250px;
+}
+
+.checked {
+    color: red;
+}

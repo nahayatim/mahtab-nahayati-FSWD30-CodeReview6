@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+
+	<title>MediaThek</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+			<!--navbar-->
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><b>Media</b><span class="label label-danger">Thek</span></a>
+    </div>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+    
+      <!-- Button with dropdown form of adding item to the Mediathek -->
+	<button id="toggleButton" class="btn" data-toggle="collapse" data-target="#collapse-btn-1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>Add to Mediathek</button>
+
+	<div class="container collapse mb-5" id="collapse-btn-1">
+		<div class="card p-3">
+			<div class="card-body">
+
+				<h1>Add to Mediathek</h1>
+				<form id="title-form">
+					<div class = "form-group">
+						<label for="title"><strong>Title</strong></label>
+						<input type="text" id="title" class="form-control form-control-sm" placeholder="Enter Title">
+					</div>
+					
+					<div class = "form-group">
+						<label for="author"><strong>Author</strong></label>
+						<input type="text" id="author" class="form-control form-control-sm" placeholder="Enter Author">
+					</div>
+					<div class="form-group">
+						<legend>Type:</legend>
+						<select id="selectType"> 
+							<option value="disabled" selected disabled>Select Type</option>
+							<option value="music">Music</option> 
+							<option value="Book">Book</option>
+							<option value="film">Film</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<legend>Genres:</legend>
+						<select id="selectGenre">
+							<option value="disabled" selected disabled>Select Genre!</option> 
+							<option value="Rock">Rock</option> 
+							<option value="Pop">Pop</option>
+							<option value="SF">SF</option>
+							<option value="Crimi">Crimi</option>
+							<option value="Horror">Horror</option>
+							<option value="Comedy">Comedy</option>
+							<option value="Drama">Drama</option>
+							<option value="Documentary">Documentary</option>
+							<option value="Children">Children</option>
+						</select>
+					</div>
+
+					<div class = "form-group">
+						<label for="publisher"><strong>Publisher</strong></label>
+						<input type="text" id="publisher" class="form-control form-control-sm" placeholder="Enter Publisher">
+					</div>
+
+					<div class = "form-group">
+						<label for="image"><strong>Image</strong></label>
+						<input type="text" id="image" class="form-control form-control-sm" placeholder="Enter Img url">
+					</div>
+
+					<div class = "form-group">
+						<label for="rating"><strong>Rating (1-lowest, 5-highest)</strong></label>
+						<input type="number" id="rating" class="form-control form-control-sm" placeholder="1-5">
+					</div>
+
+					<div class = "form-group">
+						<input type="submit" value="Submit" class="btn btn-primary btn-md">
+					</div>
+
+				</form>
+				
+			</div>
+		</div>
+	</div>
+   
+  </div>
+</nav>
+			<!--bottom navbar-->
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+          <div class="navbar-header"> <button type="button" class="collapsed navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-7" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+           <a class="navbar-brand" href="#"><b>Media</b><span class="label label-danger">Thek</span></a>       
+           </div>
+        </div>
+      </nav>
+    
+
+
+<!-- Content created with JS goes in this div -->
+	<div class="row" id="mediapage">
+	</div>
+
+
+	<script src="script.js"></script>
+	
+</body>
+</html>
